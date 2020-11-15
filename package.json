@@ -1,0 +1,24 @@
+{
+  "name": "api-weather-novu",
+  "version": "1.0.0",
+  "description": "Consumo de api con node para app Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server",
+    "mon": "nodemon server/server"
+  },
+  "keywords": [
+    "Weather",
+    "Vue"
+  ],
+  "author": "JavierGM",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
