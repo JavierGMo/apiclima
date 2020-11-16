@@ -6,9 +6,19 @@ const axios = require('axios');
 
 const PORT = process.env.PORT || '9000';
 
+// Configurar cabeceras y cors
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
+
+
 
 app.get('/weatherplace', async function(req, res){
-    
+    console.log(`ENV : ${process.env.ENV}`);
     const location = req.query.location;
     try {
         const nextDays = [];
